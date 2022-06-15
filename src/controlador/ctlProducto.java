@@ -5,10 +5,25 @@
  */
 package controlador;
 
+import modelo.consultaProducto;
+import modelo.producto;
+import vista.menu;
+
 /**
  *
  * @author Usuario
  */
 public class ctlProducto {
+    private producto prod;
+    private consultaProducto prodCon;
+    private menu vista;
+
+    public ctlProducto(producto prod, consultaProducto prodCon, menu vista) {
+        this.prod = prod;
+        this.prodCon = prodCon;
+        this.vista = vista;
+    }
+    
+    
     
 }
