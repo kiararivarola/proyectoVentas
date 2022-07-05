@@ -31,20 +31,20 @@ public class consultaCliente {
         }
     }
     
-    public List ListaClientes(String valor) {
+    public List ListaClientes() {
         List<cliente> listaCli = new ArrayList();
         String sql = "SELECT * FROM cliente ORDER BY estado_cliente ASC";
-        String buscar = "SELECT * FROM cliente WHERE nombre_cliente LIKE '%"
-                +valor+"%' OR telefono_cliente LIKE '%"+valor+"%'";
+        //String buscar = "SELECT * FROM cliente WHERE nombre_cliente LIKE '%"
+                //+valor+"%' OR telefono_cliente LIKE '%"+valor+"%'";
         try {
             con = cn.getConexion();
-            if (valor.equalsIgnoreCase("")) {
+           // if (valor.equalsIgnoreCase("")) {
                ps = con.prepareStatement(sql);
                rs = ps.executeQuery(); 
-            }else{
-               ps = con.prepareStatement(buscar);
-               rs = ps.executeQuery(); 
-            }
+           // }else{
+              // ps = con.prepareStatement(buscar);
+               //rs = ps.executeQuery(); 
+            //}
             while (rs.next()) {
                 cliente cl = new cliente();
                 cl.setId(rs.getInt("id"));
@@ -61,7 +61,7 @@ public class consultaCliente {
     }
 
     public boolean modificar(cliente cl) {
-        String sql = "UPDATE cliente SET nombre_cliente = ?, telefono_cliente = ?, direccion_cliente = ? WHERE id = ?";
+        String sql = "UPDATE cliente SET nombre_cliente = ?, telefono_cliente = ?, direccion_cliente = ? WHERE id_cliente = ?";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
@@ -78,7 +78,7 @@ public class consultaCliente {
     }
 
     public boolean accion(String estado, int id) {
-        String sql = "UPDATE cliente SET estado_cliente = ? WHERE id = ?";
+        String sql = "UPDATE cliente SET estado_cliente = ? WHERE id_cliente = ?";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);

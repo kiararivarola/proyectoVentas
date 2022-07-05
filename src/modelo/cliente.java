@@ -2,7 +2,7 @@
 package modelo;
 
 public class cliente {
-    private int id;
+    private int id_cliente;
     private String nombre_cliente;
     private String telefono_cliente;
     private String direccion_cliente;
@@ -12,7 +12,7 @@ public class cliente {
     }
 
     public cliente(int id, String nombre_cliente, String telefono_cliente, String direccion_cliente, String estado_cliente) {
-        this.id = id;
+        this.id_cliente = id;
         this.nombre_cliente = nombre_cliente;
         this.telefono_cliente = telefono_cliente;
         this.direccion_cliente = direccion_cliente;
@@ -20,11 +20,11 @@ public class cliente {
     }
 
     public int getId() {
-        return id;
+        return id_cliente;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id_cliente = id;
     }
 
     public String getNombre_cliente() {

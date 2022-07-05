@@ -3,7 +3,7 @@ package modelo;
 
 
 public class usuario {
-    private int id;
+    private String id_usuario;
     private String usuario;
     private String nombre_usuario;
     private String contrasena_usuario;
@@ -14,8 +14,8 @@ public class usuario {
     public usuario() {
     }
 
-    public usuario(int id, String usuario, String nombre_usuario, String contrasena_usuario, String rol_usuario, String caja_usuario, String estado_usuario) {
-        this.id = id;
+    public usuario(String id, String usuario, String nombre_usuario, String contrasena_usuario, String rol_usuario, String caja_usuario, String estado_usuario) {
+        this.id_usuario = id_usuario;
         this.usuario = usuario;
         this.nombre_usuario = nombre_usuario;
         this.contrasena_usuario = contrasena_usuario;
@@ -24,12 +24,12 @@ public class usuario {
         this.estado_usuario = estado_usuario;
     }
 
-    public int getId() {
-        return id;
+    public String getId() {
+        return id_usuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id_usuario = id;
     }
 
     public String getUsuario() {

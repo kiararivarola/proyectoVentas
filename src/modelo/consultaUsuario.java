@@ -25,7 +25,7 @@ public class consultaUsuario {
             ps.setString(2, contrasena_usuario);
             rs = ps.executeQuery();
             if (rs.next()) {
-                us.setId(rs.getInt("id_usuario"));
+                us.setId(rs.getString("id_usuario"));
                 us.setUsuario(rs.getString("usuario"));
                 us.setNombre_usuario(rs.getString("nombre_usuario"));
                 us.setCaja_usuario(rs.getString("caja_usuario"));
@@ -56,37 +56,37 @@ public class consultaUsuario {
         }
     }
 
-    public List ListaUsuario(String valor) {
-        List<usuario> listaUsers = new ArrayList();
+    public List ListaUsuario() {
+        List<usuario> listaUsu = new ArrayList();
         String sql = "SELECT * FROM usuario ORDER BY estado_usuario ASC";
-        String buscar = "SELECT * FROM usuario WHERE usuario LIKE '%"+valor+"%' OR nombre_usuario LIKE '%"+valor+"%'";
+        //String buscar = "SELECT * FROM usuario WHERE usuario LIKE '%"+valor+"%' OR nombre_usuario LIKE '%"+valor+"%'";
         try {
             con = cn.getConexion();
-            if (valor.equalsIgnoreCase("")) {
+            //if (valor.equalsIgnoreCase("")) {
                ps = con.prepareStatement(sql);
                rs = ps.executeQuery(); 
-            }else{
-               ps = con.prepareStatement(buscar);
+            //}else{
+               //ps = con.prepareStatement(buscar);
                rs = ps.executeQuery(); 
-            }
+           // }
             while (rs.next()) {
                 usuario us = new usuario();
-                us.setId(rs.getInt("id"));
+                us.setId(rs.getString("id_usuario"));
                 us.setUsuario(rs.getString("usuario"));
                 us.setNombre_usuario(rs.getString("nombre_usuario"));
                 us.setCaja_usuario(rs.getString("caja_usuario"));
                 us.setRol_usuario(rs.getString("rol_usuario"));
                 us.setEstado_usuario(rs.getString("estado_usuario"));
-                listaUsers.add(us);
+                listaUsu.add(us);
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.toString());
         }
-        return listaUsers;
+        return listaUsu;
     }
 
     public boolean modificar(usuario us) {
-        String sql = "UPDATE usuario SET usuario = ?, nombre_usuario = ?, caja_usuario = ?, rol_usuario = ? WHERE id = ?";
+        String sql = "UPDATE usuario SET usuario = ?, nombre_usuario = ?, caja_usuario = ?, rol_usuario = ? WHERE id_usuario = ?";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
@@ -94,7 +94,7 @@ public class consultaUsuario {
             ps.setString(2, us.getNombre_usuario());
             ps.setString(3, us.getCaja_usuario());
             ps.setString(4, us.getRol_usuario());
-            ps.setInt(5, us.getId());
+            ps.setString(5, us.getId());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -104,7 +104,7 @@ public class consultaUsuario {
     }
 
     public boolean accion(String estado, int id) {
-        String sql = "UPDATE usuario SET estado_usuario = ? WHERE id = ?";
+        String sql = "UPDATE usuario SET estado_usuario = ? WHERE id_usuario = ?";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
