@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vista;
 
 import controlador.ctlCategoria;
@@ -78,6 +74,7 @@ public class menu extends javax.swing.JFrame {
         jLabelCategoria = new javax.swing.JLabel();
         jPanelConfiguracion = new javax.swing.JPanel();
         jLabelConfiguracion = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         txtBuscarProducto = new javax.swing.JTextField();
@@ -94,6 +91,7 @@ public class menu extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         txtDireccionCliente1 = new javax.swing.JTextPane();
+        jLabel44 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
@@ -130,6 +128,7 @@ public class menu extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtDireccionCliente = new javax.swing.JTextPane();
+        txtIdCliente = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableClientes = new javax.swing.JTable();
         PaginadorCliente = new javax.swing.JPanel();
@@ -162,11 +161,12 @@ public class menu extends javax.swing.JFrame {
         btnModificarUsuario = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        txUsuarioUsu = new javax.swing.JTextField();
+        txtUsuarioUsu = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         cbxCajaUsu = new javax.swing.JComboBox<>();
         cbxRolUsu = new javax.swing.JComboBox<>();
         txtContrasenaUsu = new javax.swing.JPasswordField();
+        txtIdUsu = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
         tableUsuario = new javax.swing.JTable();
         PaginadorUsuario = new javax.swing.JPanel();
@@ -240,7 +240,6 @@ public class menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 680));
-        setPreferredSize(new java.awt.Dimension(1300, 650));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
@@ -252,7 +251,7 @@ public class menu extends javax.swing.JFrame {
         jLabelNuevaVenta.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelNuevaVenta.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNuevaVenta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNuevaVenta.setText("Nueva Venta");
+        jLabelNuevaVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Nventa.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelNuevaVentaLayout = new javax.swing.GroupLayout(jPanelNuevaVenta);
         jPanelNuevaVenta.setLayout(jPanelNuevaVentaLayout);
@@ -273,7 +272,7 @@ public class menu extends javax.swing.JFrame {
         jLabelUsuarios.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         jLabelUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelUsuarios.setText("Usuarios");
+        jLabelUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/users.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelUsuariosLayout = new javax.swing.GroupLayout(jPanelUsuarios);
         jPanelUsuarios.setLayout(jPanelUsuariosLayout);
@@ -294,7 +293,7 @@ public class menu extends javax.swing.JFrame {
         jLabelNuevaCompra.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelNuevaCompra.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNuevaCompra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNuevaCompra.setText("Nueva Compra");
+        jLabelNuevaCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compras.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelNuevaCompraLayout = new javax.swing.GroupLayout(jPanelNuevaCompra);
         jPanelNuevaCompra.setLayout(jPanelNuevaCompraLayout);
@@ -315,7 +314,7 @@ public class menu extends javax.swing.JFrame {
         jLabelProductos.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelProductos.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProductos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelProductos.setText("Productos");
+        jLabelProductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/producto.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelProductosLayout = new javax.swing.GroupLayout(jPanelProductos);
         jPanelProductos.setLayout(jPanelProductosLayout);
@@ -336,7 +335,7 @@ public class menu extends javax.swing.JFrame {
         jLabelClientes.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelClientes.setForeground(new java.awt.Color(255, 255, 255));
         jLabelClientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelClientes.setText("Clientes");
+        jLabelClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Clientes.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelClientesLayout = new javax.swing.GroupLayout(jPanelClientes);
         jPanelClientes.setLayout(jPanelClientesLayout);
@@ -357,7 +356,7 @@ public class menu extends javax.swing.JFrame {
         jLabelProveedores.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelProveedores.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProveedores.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelProveedores.setText("Proveedores");
+        jLabelProveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/proveedor.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelProveedorLayout = new javax.swing.GroupLayout(jPanelProveedor);
         jPanelProveedor.setLayout(jPanelProveedorLayout);
@@ -378,7 +377,7 @@ public class menu extends javax.swing.JFrame {
         jLabelCategoria.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelCategoria.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCategoria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelCategoria.setText("Categoria");
+        jLabelCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/box.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelCategoriasLayout = new javax.swing.GroupLayout(jPanelCategorias);
         jPanelCategorias.setLayout(jPanelCategoriasLayout);
@@ -399,7 +398,7 @@ public class menu extends javax.swing.JFrame {
         jLabelConfiguracion.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelConfiguracion.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConfiguracion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelConfiguracion.setText("Configuracion");
+        jLabelConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/config.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelConfiguracionLayout = new javax.swing.GroupLayout(jPanelConfiguracion);
         jPanelConfiguracion.setLayout(jPanelConfiguracionLayout);
@@ -413,6 +412,9 @@ public class menu extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanelConfiguracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 120, 60));
+
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Carrito-de-compras.png"))); // NOI18N
+        jPanel2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 90, 60));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 650));
 
@@ -513,12 +515,16 @@ public class menu extends javax.swing.JFrame {
                 .addGap(118, 118, 118))
         );
 
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(672, Short.MAX_VALUE)
+                .addContainerGap(629, Short.MAX_VALUE)
+                .addComponent(jLabel44)
+                .addGap(18, 18, 18)
                 .addComponent(txtBuscarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -534,7 +540,8 @@ public class menu extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBuscarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnUsuarios))
+                    .addComponent(btnUsuarios)
+                    .addComponent(jLabel44))
                 .addGap(69, 69, 69)
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -767,10 +774,15 @@ public class menu extends javax.swing.JFrame {
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(btnNuevoCliente)
-                        .addGap(43, 43, 43)
-                        .addComponent(btnRegistrarCliente)
-                        .addGap(57, 57, 57)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(btnNuevoCliente)
+                                .addGap(43, 43, 43)
+                                .addComponent(btnRegistrarCliente)
+                                .addGap(57, 57, 57))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                                .addComponent(txtIdCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)))
                         .addComponent(btnModificarCliente)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
@@ -799,7 +811,9 @@ public class menu extends javax.swing.JFrame {
                     .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegistrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModificarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(118, 118, 118))
+                .addGap(46, 46, 46)
+                .addComponent(txtIdCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
 
         tableClientes.setModel(new javax.swing.table.DefaultTableModel(
@@ -1047,12 +1061,17 @@ public class menu extends javax.swing.JFrame {
 
         jLabel26.setText("Rol");
 
+        cbxCajaUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General" }));
+
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1064,21 +1083,20 @@ public class menu extends javax.swing.JFrame {
                         .addGap(62, 62, 62)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNombreUsu, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                            .addComponent(txUsuarioUsu)
-                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(cbxRolUsu, javax.swing.GroupLayout.Alignment.LEADING, 0, 134, Short.MAX_VALUE)
-                                .addComponent(cbxCajaUsu, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtUsuarioUsu)
+                            .addComponent(cbxRolUsu, 0, 209, Short.MAX_VALUE)
+                            .addComponent(cbxCajaUsu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtContrasenaUsu)))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(btnNuevoUsuario)
                         .addGap(43, 43, 43)
                         .addComponent(btnRegistrarUsuario)
                         .addGap(57, 57, 57)
-                        .addComponent(btnModificarUsuario)))
+                        .addComponent(btnModificarUsuario))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(txtIdUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
@@ -1086,10 +1104,10 @@ public class menu extends javax.swing.JFrame {
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel25)
-                    .addComponent(txUsuarioUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUsuarioUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel21)
@@ -1113,12 +1131,14 @@ public class menu extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel26)
                     .addComponent(cbxRolUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegistrarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModificarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(118, 118, 118))
+                .addGap(44, 44, 44)
+                .addComponent(txtIdUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
 
         tableUsuario.setModel(new javax.swing.table.DefaultTableModel(
@@ -1721,10 +1741,10 @@ public class menu extends javax.swing.JFrame {
     public javax.swing.JButton btnRegistrarProveedor;
     public javax.swing.JButton btnRegistrarUsuario;
     private javax.swing.JButton btnUsuarios;
-    private javax.swing.JComboBox<String> cbxCajaUsu;
+    public javax.swing.JComboBox<String> cbxCajaUsu;
     private javax.swing.JComboBox<String> cbxCategoriaProd;
     private javax.swing.JComboBox<String> cbxProveedorProd;
-    private javax.swing.JComboBox<String> cbxRolUsu;
+    public javax.swing.JComboBox<String> cbxRolUsu;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -1742,7 +1762,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
+    public javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -1765,10 +1785,12 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1832,27 +1854,28 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jlabelTotalPagar;
     private javax.swing.JLabel jlabelTotalPagar1;
     public javax.swing.JTable tableCate;
-    private javax.swing.JTable tableClientes;
+    public javax.swing.JTable tableClientes;
     private javax.swing.JTable tableProd;
     private javax.swing.JTable tableProveedor;
-    private javax.swing.JTable tableUsuario;
-    private javax.swing.JTextField txUsuarioUsu;
+    public javax.swing.JTable tableUsuario;
     private javax.swing.JTextField txtBuscarProducto;
     private javax.swing.JTextField txtCantNuevaCompra;
     private javax.swing.JTextField txtCantNuevaVenta;
     private javax.swing.JTextField txtCodNuevaCompra;
     private javax.swing.JTextField txtCodNuevaVenta;
     private javax.swing.JTextField txtCodigoProd;
-    private javax.swing.JPasswordField txtContrasenaUsu;
+    public javax.swing.JPasswordField txtContrasenaUsu;
     private javax.swing.JTextField txtDescripcionProd;
-    private javax.swing.JTextPane txtDireccionCliente;
+    public javax.swing.JTextPane txtDireccionCliente;
     private javax.swing.JTextPane txtDireccionCliente1;
     private javax.swing.JTextPane txtDireccionProveedor;
+    public javax.swing.JTextField txtIdCliente;
+    public javax.swing.JTextField txtIdUsu;
     public javax.swing.JTextField txtNombreCate;
-    private javax.swing.JTextField txtNombreCliente;
+    public javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombreCliente1;
     private javax.swing.JTextField txtNombreProveedor;
-    private javax.swing.JTextField txtNombreUsu;
+    public javax.swing.JTextField txtNombreUsu;
     private javax.swing.JTextField txtPrecioCompraProd;
     private javax.swing.JTextField txtPrecioNuevaCompra;
     private javax.swing.JTextField txtPrecioNuevaVenta;
@@ -1861,10 +1884,11 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField txtProductoNuevaVenta;
     private javax.swing.JTextField txtRucProveedor;
     private javax.swing.JTextField txtStockNuevaVenta;
-    private javax.swing.JTextField txtTelefonoCliente;
+    public javax.swing.JTextField txtTelefonoCliente;
     private javax.swing.JTextField txtTelefonoCliente1;
     private javax.swing.JTextField txtTelefonoProveedor;
     private javax.swing.JTextField txtTotalNuevaCompra;
     private javax.swing.JTextField txtTotalNuevaVenta;
+    public javax.swing.JTextField txtUsuarioUsu;
     // End of variables declaration//GEN-END:variables
 }
