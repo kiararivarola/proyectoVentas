@@ -1063,6 +1063,8 @@ public class menu extends javax.swing.JFrame {
 
         cbxCajaUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General" }));
 
+        cbxRolUsu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin" }));
+
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(

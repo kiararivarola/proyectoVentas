@@ -51,6 +51,7 @@ public class ctlCliente implements ActionListener, MouseListener {
                 cl.setTelefono_cliente(vista.txtTelefonoCliente.getText());
                 cl.setDireccion_cliente(vista.txtDireccionCliente.getText());
                 if (clCon.registrar(cl)) {
+                    listarClientes();
                     JOptionPane.showMessageDialog(null, "Cliente registrado con exito");
                 }else {
                     JOptionPane.showMessageDialog(null, "Error al registrar cliente");
@@ -71,7 +72,7 @@ public class ctlCliente implements ActionListener, MouseListener {
             ob[2] = listaCli.get(i).getDireccion_cliente();
             modelo.addRow(ob);  
         }
-        vista.tableUsuario.setModel(modelo);
+        vista.tableClientes.setModel(modelo);
     }
 
     private void limpiar() {
@@ -79,8 +80,15 @@ public class ctlCliente implements ActionListener, MouseListener {
     }
 
     @Override
-    public void mouseClicked(MouseEvent me) {
-    }
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == vista.tableClientes) {
+            int fila = vista.tableClientes.rowAtPoint(e.getPoint());
+            vista.txtNombreCliente.setText(vista.tableClientes.getValueAt(fila, 0).toString());
+            vista.txtTelefonoCliente.setText(vista.tableClientes.getValueAt(fila, 1).toString());
+            vista.txtDireccionCliente.setText(vista.tableClientes.getValueAt(fila, 2).toString());
+        }
+        }
+    
 
     @Override
     public void mousePressed(MouseEvent me) {

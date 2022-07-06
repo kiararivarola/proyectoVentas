@@ -11,8 +11,8 @@ public class cliente {
     public cliente() {
     }
 
-    public cliente(int id, String nombre_cliente, String telefono_cliente, String direccion_cliente, String estado_cliente) {
-        this.id_cliente = id;
+    public cliente(int id_cliente, String nombre_cliente, String telefono_cliente, String direccion_cliente, String estado_cliente) {
+        this.id_cliente = id_cliente;
         this.nombre_cliente = nombre_cliente;
         this.telefono_cliente = telefono_cliente;
         this.direccion_cliente = direccion_cliente;
@@ -24,7 +24,7 @@ public class cliente {
     }
 
     public void setId(int id) {
-        this.id_cliente = id;
+        this.id_cliente = id_cliente;
     }
 
     public String getNombre_cliente() {
